@@ -1,0 +1,9 @@
+EXPRESS_PORT=3000
+DB_DIALECT=postgres
+
+
+#Enter these credentials for you database
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+DB_HOST=

@@ -1,0 +1,37 @@
+{
+  "name": "tradelot-service",
+  "version": "1.0.0",
+  "description": "A Node.js/Express.js service for managing stock trades and lot accounting (FIFO & LIFO) with PostgreSQL.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubLuci/tradelot-service.git"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "Express",
+    "Sequlize"
+  ],
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubLuci/tradelot-service/issues"
+  },
+  "homepage": "https://github.com/ShubLuci/tradelot-service#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.15.6",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.0"
+  }
+}
