@@ -6,8 +6,8 @@ Paste the SQL queries in PostgreSQL from path: src/sql/queries.sql as it is.
 
 ## Step 3: 
 Run Some Scrips to Execute this code  
-    >> npm i
-    >> npm run dev
+1. npm i
+2. npm run dev
 
 ## Step 4: 
 Refer the API documentation after running the server to check the code
