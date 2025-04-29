@@ -3,6 +3,7 @@ require('dotenv').config();
 const {dbConnection} = require('./config/database');
 const tradeRoutes = require('./routes/tradeRoutes');
 const lotRoutes = require('./routes/lotRoutes');
+const cors = require('cors');
 
 const app = express();
 
@@ -24,6 +25,9 @@ const EXPRESS_PORT = process.env.EXPRESS_PORT;
 
 // Use this to get POST data from the API's
 app.use(express.json());
+
+// CORS
+app.use(cors());
 
 // Routes for Trades and Lots.
 app.use('/api/trades', tradeRoutes);
