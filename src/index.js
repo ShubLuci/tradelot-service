@@ -4,6 +4,7 @@ const {dbConnection} = require('./config/database');
 const tradeRoutes = require('./routes/tradeRoutes');
 const lotRoutes = require('./routes/lotRoutes');
 const cors = require('cors');
+const serverless = require('serverless-http');
 
 const app = express();
 
@@ -32,3 +33,7 @@ app.use(cors());
 // Routes for Trades and Lots.
 app.use('/api/trades', tradeRoutes);
 app.use('/api/lots', lotRoutes);
+
+
+module.exports = app;
+module.exports.handler = serverless(app);
