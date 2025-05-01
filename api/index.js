@@ -14,9 +14,9 @@ const EXPRESS_PORT = process.env.EXPRESS_PORT;
 (async () => {
     try {
         // Express Server Initialization
-        app.listen(EXPRESS_PORT, () => {
-            console.log(`SUCCESS > index.js > IIFE > Express Server Running at Port ${EXPRESS_PORT}`);
-        });
+        // app.listen(EXPRESS_PORT, () => {
+        //     console.log(`SUCCESS > index.js > IIFE > Express Server Running at Port ${EXPRESS_PORT}`);
+        // });
         // Database Connection Initialization
         dbConnection();
     } catch(err) {
