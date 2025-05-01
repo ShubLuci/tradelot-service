@@ -4,7 +4,6 @@ const {dbConnection} = require('./config/database');
 const tradeRoutes = require('./routes/tradeRoutes');
 const lotRoutes = require('./routes/lotRoutes');
 const cors = require('cors');
-const serverless = require('serverless-http');
 
 const app = express();
 
@@ -14,9 +13,9 @@ const EXPRESS_PORT = process.env.EXPRESS_PORT;
 (async () => {
     try {
         // Express Server Initialization
-        // app.listen(EXPRESS_PORT, () => {
-        //     console.log(`SUCCESS > index.js > IIFE > Express Server Running at Port ${EXPRESS_PORT}`);
-        // });
+        app.listen(EXPRESS_PORT, () => {
+            console.log(`SUCCESS > index.js > IIFE > Express Server Running at Port ${EXPRESS_PORT}`);
+        });
         // Database Connection Initialization
         dbConnection();
     } catch(err) {
@@ -34,6 +33,3 @@ app.use(cors());
 app.use('/api/trades', tradeRoutes);
 app.use('/api/lots', lotRoutes);
 
-
-module.exports = app;
-module.exports.handler = serverless(app);
